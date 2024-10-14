@@ -1,1 +1,0 @@
-print("SI LO LEE ES GAY")
