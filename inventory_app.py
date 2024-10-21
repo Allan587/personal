@@ -8,7 +8,7 @@ class smartfilter_main:
                 
         #self.ent()  
         self.lab()
-        self.butt()
+        self.btn()
     
     def lab(self):
         lab = tk.Label(self.root, text="Smart Filter", bg="#E6E6FA", font=("Arial", 16))
@@ -23,10 +23,11 @@ class smartfilter_main:
     def forth(self):
         self.forth_window = update_in(self)
            
-    def butt(self):
-        butt_v = tk.Button(self.root, text="Apartado de Ventas", bg="Grey", command=self.secondary) .place(relx=0.35, rely=0.16, relwidth=0.3,  relheight=0.1)
-        butt_i = tk.Button(self.root, text="Inventario", bg="Grey", command=self.third).place(relx=0.35, rely=0.3, relwidth=0.3,  relheight=0.1)
-        butt_u = tk.Button(self.root, text="Actualización de Inventario", bg="Grey", command=self.forth).place(relx=0.35, rely=0.44, relwidth=0.3,  relheight=0.1)    
+    def btn(self):
+        btn_v = tk.Button(self.root, text="Apartado de Ventas", bg="Grey", command=self.secondary) .place(relx=0.35, rely=0.16, relwidth=0.3,  relheight=0.1)
+        btn_i = tk.Button(self.root, text="Inventario", bg="Grey", command=self.third).place(relx=0.35, rely=0.3, relwidth=0.3,  relheight=0.1)
+        btn_u = tk.Button(self.root, text="Actualización de Inventario", bg="Grey", command=self.forth).place(relx=0.35, rely=0.44, relwidth=0.3,  relheight=0.1)    
+        btn_e = btn_ex = tk.Button(self.root, text="Salir", bg="Red", fg="White", command=self.root.destroy).place(relx=0.35, rely=0.58, relwidth=0.3, relheight=0.05)
 #<------------------------------------------------------------------------------------------------------------------------>       
 class sales:
     
@@ -61,7 +62,7 @@ class sales:
         ent_q =  tk.Entry(self.Sales).place(relx=0.41, rely=0.12, relwidth=0.1, relheight=0.05)
         
     def btn(self):  
-        cerrar_boton = tk.Button(self.Sales, text="Salir", bg="Red", fg="White", command=self.Sales.destroy).place(relx=0.85, rely=0.9, relwidth=0.1, relheight=0.05)
+        btn_ex = tk.Button(self.Sales, text="Salir", bg="Red", fg="White", command=self.Sales.destroy).place(relx=0.85, rely=0.9, relwidth=0.1, relheight=0.05)
 #<------------------------------------------------------------------------------------------------------------------------>       
 class inventory:
     
@@ -96,7 +97,7 @@ class inventory:
         ent_s =  tk.Entry(self.inventory).place(relx=0.53, rely=0.12, relwidth=0.1, relheight=0.05)
         
     def btn(self):
-        cerrar_boton = tk.Button(self.inventory, text="Salir", bg="Red", fg="White", command=self.inventory.destroy).place(relx=0.85, rely=0.9, relwidth=0.1, relheight=0.05)
+        btn_ex = tk.Button(self.inventory, text="Salir", bg="Red", fg="White", command=self.inventory.destroy).place(relx=0.85, rely=0.9, relwidth=0.1, relheight=0.05)
 #<------------------------------------------------------------------------------------------------------------------------>
 class update_in:
     
@@ -128,7 +129,7 @@ class update_in:
         
         
     def btn(self):
-        cerrar_boton = tk.Button(self.update_inventory, text="Salir", bg="Red", fg="White", command=self.update_inventory.destroy).place(relx=0.85, rely=0.9, relwidth=0.1, relheight=0.05)
+        btn_ex = tk.Button(self.update_inventory, text="Salir", bg="Red", fg="White", command=self.update_inventory.destroy).place(relx=0.85, rely=0.9, relwidth=0.1, relheight=0.05)
 
 #<------------------------------------------------------------------------------------------------------------------------>
 def main():
