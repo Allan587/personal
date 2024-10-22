@@ -90,14 +90,17 @@ class inventory:
         
     def ent(self):
         
-        ent_id = tk.Entry(self.inventory).place(relx=0.05, rely=0.12, relwidth=0.1, relheight=0.05)
-        ent_n =  tk.Entry(self.inventory).place(relx=0.17, rely=0.12, relwidth=0.1, relheight=0.05)
-        ent_m =  tk.Entry(self.inventory).place(relx=0.29, rely=0.12, relwidth=0.1, relheight=0.05)
-        ent_t =  tk.Entry(self.inventory).place(relx=0.41, rely=0.12, relwidth=0.1, relheight=0.05)
-        ent_s =  tk.Entry(self.inventory).place(relx=0.53, rely=0.12, relwidth=0.1, relheight=0.05)
+        self.ent_id = tk.Entry(self.inventory).place(relx=0.05, rely=0.12, relwidth=0.1, relheight=0.05)
+        self.ent_n =  tk.Entry(self.inventory).place(relx=0.17, rely=0.12, relwidth=0.1, relheight=0.05)
+        self.ent_m =  tk.Entry(self.inventory).place(relx=0.29, rely=0.12, relwidth=0.1, relheight=0.05)
+        self.ent_t =  tk.Entry(self.inventory).place(relx=0.41, rely=0.12, relwidth=0.1, relheight=0.05)
+        self.ent_s =  tk.Entry(self.inventory).place(relx=0.53, rely=0.12, relwidth=0.1, relheight=0.05)
         
     def btn(self):
         btn_ex = tk.Button(self.inventory, text="Salir", bg="Red", fg="White", command=self.inventory.destroy).place(relx=0.85, rely=0.9, relwidth=0.1, relheight=0.05)
+    
+    def get_products_in(self):
+        list [self.ent_id, self.ent_n, self.ent_m, self.ent_t, self.ent_s]
 #<------------------------------------------------------------------------------------------------------------------------>
 class update_in:
     

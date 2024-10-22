@@ -3,12 +3,14 @@ import inventory_app
 
 conexion = sqlite3.connect('inventory.sqlite3')
 
+products = inventory_app.inventory.get_products_in()
+
 cursor = conexion.cursor()
 
 cursor.execute('''
-    INSERT INTO usuarios (nombre, edad) 
-    VALUES ('Juan', 30)
-''')
+    INSERT INTO products (id_product, product, stock) 
+    VALUES (?,?,?)
+''', products)
 
 conexion.commit()
 
