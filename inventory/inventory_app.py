@@ -34,7 +34,6 @@ class sales:
     def __init__(self, Smartfilter_main):
         self.Smartfilter_main = Smartfilter_main
         
-        
         self.Sales = Toplevel()
         self.Sales.title("Apartado de ventas")
         self.Sales.grab_set()
