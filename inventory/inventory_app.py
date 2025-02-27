@@ -46,19 +46,19 @@ class sales:
         self.lbl()
         
     def lbl(self):
-        #inf = list("ID producto", "Nombre", "Marca", "Tipo", "Stock") Terminar y hacer un range con estos datos
+        #inf = list("ID producto", "Nombre", "Marca", "Tipo", "Stock") Finish and make a range with this information
         
         lbl_id = tk.Label(self.Sales, text="ID producto", bg="Grey").place(relx=0.05, rely=0.05, relwidth=0.1, relheight=0.05)
         lbl_n = tk.Label(self.Sales, text="Nombre", bg="Grey").place(relx=0.17, rely=0.05, relwidth=0.1, relheight=0.05)
-        lbl_m = tk.Label(self.Sales, text="Marca", bg="Grey").place(relx=0.29, rely=0.05, relwidth=0.1, relheight=0.05)
-        lbl_q = tk.Label(self.Sales, text="Cantidad", bg="Grey").place(relx=0.41, rely=0.05, relwidth=0.1, relheight=0.05)
+        lbl_b = tk.Label(self.Sales, text="Marca", bg="Grey").place(relx=0.29, rely=0.05, relwidth=0.1, relheight=0.05)
+        lbl_a = tk.Label(self.Sales, text="Cantidad", bg="Grey").place(relx=0.41, rely=0.05, relwidth=0.1, relheight=0.05)
         
     def ent(self):  
-        
+        # Make entries to display informacion filtered by the user
         ent_id = tk.Entry(self.Sales).place(relx=0.05, rely=0.12, relwidth=0.1, relheight=0.05)
         ent_n =  tk.Entry(self.Sales).place(relx=0.17, rely=0.12, relwidth=0.1, relheight=0.05)
-        ent_m =  tk.Entry(self.Sales).place(relx=0.29, rely=0.12, relwidth=0.1, relheight=0.05)
-        ent_q =  tk.Entry(self.Sales).place(relx=0.41, rely=0.12, relwidth=0.1, relheight=0.05)
+        ent_b =  tk.Entry(self.Sales).place(relx=0.29, rely=0.12, relwidth=0.1, relheight=0.05)
+        ent_a =  tk.Entry(self.Sales).place(relx=0.41, rely=0.12, relwidth=0.1, relheight=0.05)
         
     def btn(self):  
         btn_ex = tk.Button(self.Sales, text="Salir", bg="Red", fg="White", command=self.Sales.destroy).place(relx=0.85, rely=0.9, relwidth=0.1, relheight=0.05)
@@ -83,15 +83,15 @@ class inventory:
     def lbl(self):    
         lbl_id = tk.Label(self.inventory, text="ID producto", bg="Grey").place(relx=0.05, rely=0.05, relwidth=0.1, relheight=0.05)
         lbl_n = tk.Label(self.inventory, text="Nombre", bg="Grey").place(relx=0.17, rely=0.05, relwidth=0.1, relheight=0.05)
-        lbl_m = tk.Label(self.inventory, text="Marca", bg="Grey").place(relx=0.29, rely=0.05, relwidth=0.1, relheight=0.05)
+        lbl_b = tk.Label(self.inventory, text="Marca", bg="Grey").place(relx=0.29, rely=0.05, relwidth=0.1, relheight=0.05)
         lbl_t = tk.Label(self.inventory, text="Tipo", bg="Grey").place(relx=0.41, rely=0.05, relwidth=0.1, relheight=0.05)
         lbl_s = tk.Label(self.inventory, text="Stock", bg="Grey").place(relx=0.53, rely=0.05, relwidth=0.1, relheight=0.05)
         
     def ent(self):
-        
+        #Make entries to show what the users expect
         self.ent_id = tk.Entry(self.inventory).place(relx=0.05, rely=0.12, relwidth=0.1, relheight=0.05)
         self.ent_n =  tk.Entry(self.inventory).place(relx=0.17, rely=0.12, relwidth=0.1, relheight=0.05)
-        self.ent_m =  tk.Entry(self.inventory).place(relx=0.29, rely=0.12, relwidth=0.1, relheight=0.05)
+        self.ent_b =  tk.Entry(self.inventory).place(relx=0.29, rely=0.12, relwidth=0.1, relheight=0.05)
         self.ent_t =  tk.Entry(self.inventory).place(relx=0.41, rely=0.12, relwidth=0.1, relheight=0.05)
         self.ent_s =  tk.Entry(self.inventory).place(relx=0.53, rely=0.12, relwidth=0.1, relheight=0.05)
         
@@ -99,7 +99,7 @@ class inventory:
         btn_ex = tk.Button(self.inventory, text="Salir", bg="Red", fg="White", command=self.inventory.destroy).place(relx=0.85, rely=0.9, relwidth=0.1, relheight=0.05)
     
     def get_products_in(self):
-        list [self.ent_id, self.ent_n, self.ent_m, self.ent_t, self.ent_s]
+        list [self.ent_id, self.ent_n, self.ent_b, self.ent_t, self.ent_s]
 #<------------------------------------------------------------------------------------------------------------------------>
 class update_in:
     
@@ -119,18 +119,19 @@ class update_in:
         self.ent()
             
     def lbl(self):
-        #inf = list("ID producto", "Nombre", "Marca", "Tipo", "Stock") Terminar y hacer un range con estos datos
+        #inf = list("ID producto", "Nombre", "Marca", "Tipo", "Stock") Finish and make a range with this information as a display window
         
         lbl_id = tk.Label(self.update_inventory, text="ID producto", bg="Grey").place(relx=0.05, rely=0.05, relwidth=0.1, relheight=0.05)
-        lbl_q = tk.Label(self.update_inventory, text="Cantidad", bg="Grey").place(relx=0.17, rely=0.05, relwidth=0.1, relheight=0.05)
+        lbl_a = tk.Label(self.update_inventory, text="Cantidad", bg="Grey").place(relx=0.17, rely=0.05, relwidth=0.1, relheight=0.05)
         
     def ent(self):
-        
+    
         ent_id = tk.Entry(self.update_inventory).place(relx=0.05, rely=0.12, relwidth=0.1, relheight=0.05)
-        ent_q =  tk.Entry(self.update_inventory).place(relx=0.17, rely=0.12, relwidth=0.1, relheight=0.05)
+        ent_a =  tk.Entry(self.update_inventory).place(relx=0.17, rely=0.12, relwidth=0.1, relheight=0.05)
         
         
     def btn(self):
+        #add buttons to display entered items and filter information
         btn_ex = tk.Button(self.update_inventory, text="Salir", bg="Red", fg="White", command=self.update_inventory.destroy).place(relx=0.85, rely=0.9, relwidth=0.1, relheight=0.05)
 
 #<------------------------------------------------------------------------------------------------------------------------>
